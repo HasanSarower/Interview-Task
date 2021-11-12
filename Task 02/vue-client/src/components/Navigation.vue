@@ -15,7 +15,12 @@
           v-if="isLoggedIn"
           class="nav-item nav-link"
           :to="{ name: 'Dashboard' }"
-        >Dashboard</router-link>
+        >User List</router-link>
+        <router-link
+          v-if="isLoggedIn"
+          class="nav-item nav-link"
+          :to="{ name: 'Role_list' }"
+        >Role List</router-link>
         <!-- <router-link class="nav-item nav-link" v-if="isLoggedIn" @click.prevent="logout"> Logout </router-link> -->
         <a class="nav-item nav-link" v-if="isLoggedIn" @click.prevent="logout" >Logout</a>
       </ul>
