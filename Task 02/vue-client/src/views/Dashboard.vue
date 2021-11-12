@@ -15,7 +15,7 @@
       <td>{{ index+1 }}</td>
       <td>{{ user.name }}</td>
       <td>{{ user.email }}</td>
-      <td><router-link :to="{name:'User', params:{id:user.id}}"> <button>See more ..</button> </router-link></td>
+      <td><router-link :to="{name:'User', params:{id:user.id}}"> <button class="btn btn-secondary">See more ..</button> </router-link></td>
         </tr>
       </table>
   </div>
