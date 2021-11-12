@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "d3b943c6-d582-4cc6-9d2c-ed40fe06960b",
+		"name": "tik_web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"TestUser1\",\r\n    \"email\": \"ab@gmail.com\",\r\n    \"password\":\"ab12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ab@gmail.com\",\r\n    \"password\":\"ab12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI0YTQyZjIzOWMwMDJlNTY3YjM5NTE4NTA3NmIwODBlYzIzNGMxMzk2N2ViOTc0NDlhMWJjYzVlOTRhOWJkYjA4YTZiMmQ4YmViNzhiYTViIn0.eyJhdWQiOiIxIiwianRpIjoiMjRhNDJmMjM5YzAwMmU1NjdiMzk1MTg1MDc2YjA4MGVjMjM0YzEzOTY3ZWI5NzQ0OWExYmNjNWU5NGE5YmRiMDhhNmIyZDhiZWI3OGJhNWIiLCJpYXQiOjE2MzY2MzA3MTksIm5iZiI6MTYzNjYzMDcxOSwiZXhwIjoxNjY4MTY2NzE5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.sq30yJv27yZRJ1bFjBsp1Nvg2JOSlE__B63aWLiwfzzoXMobCA9BbnDhqIN-eeOScbm-7MRvNiceA_725SGeque8MXvkrKrUpD9dAA411ZNwMZEmI_yp3MllnyyZcJa4n5Asqf0EW6239xR2JtPsN8ICd7yuj_BBSj6WdSo8hJ_mr8FuSqLJrNyxZRXsT7NPeJdOmTr8JbWE6Pq1r5EBMIOCtp5KZ3Req-l6fIrlGZEP003EKU_jZ3YKQ_TS5LH4lfYD5X9KJ5Wf1ld7_JFZC6OoC9wdDSJ8gR78T-FRXpMRUi_x0x5dDQlnNSlAVIi4ikvGkeuq58vO-mbMkfuX5ZBi7Uu4d0Ng-sZsOo1T5tRafgU6G6zHc3cupdcWvCbeN9t-LuoR9Zp5Wx18_xlj6_eL24TbeXgBb0Az9mZV6g7Oe6kkD93Ug8wB8iK2FditOphT-KQ842vT4EB8ANgXejZ9_ogDi6ITL9XRhml-vy-3YLR_fpsQOfHouycF3bgA8xka6M8efkvZ59dhdQtwnrIVaHMsjNaZcz76qaqI2wO4zfVhX-t35O3_iPG7FPwQIkZh_qGf9K5dsIKMW5LY1BWJkJEgjmfLo8HQigTmEaj6l_9K5NKVVrnHlyeNkzJdnN4YUtuhpUadBA0kvHMbplwnn2ZvW9CnxeBUh1jwhFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/role-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"role-list"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-profile/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-profile",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-assign-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : 2,\r\n    \"role_id\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete-assign-role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete-assign-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : 1,\r\n    \"role_id\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/assign-role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"assign-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete-role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_name\" : \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-roles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI0YTQyZjIzOWMwMDJlNTY3YjM5NTE4NTA3NmIwODBlYzIzNGMxMzk2N2ViOTc0NDlhMWJjYzVlOTRhOWJkYjA4YTZiMmQ4YmViNzhiYTViIn0.eyJhdWQiOiIxIiwianRpIjoiMjRhNDJmMjM5YzAwMmU1NjdiMzk1MTg1MDc2YjA4MGVjMjM0YzEzOTY3ZWI5NzQ0OWExYmNjNWU5NGE5YmRiMDhhNmIyZDhiZWI3OGJhNWIiLCJpYXQiOjE2MzY2MzA3MTksIm5iZiI6MTYzNjYzMDcxOSwiZXhwIjoxNjY4MTY2NzE5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.sq30yJv27yZRJ1bFjBsp1Nvg2JOSlE__B63aWLiwfzzoXMobCA9BbnDhqIN-eeOScbm-7MRvNiceA_725SGeque8MXvkrKrUpD9dAA411ZNwMZEmI_yp3MllnyyZcJa4n5Asqf0EW6239xR2JtPsN8ICd7yuj_BBSj6WdSo8hJ_mr8FuSqLJrNyxZRXsT7NPeJdOmTr8JbWE6Pq1r5EBMIOCtp5KZ3Req-l6fIrlGZEP003EKU_jZ3YKQ_TS5LH4lfYD5X9KJ5Wf1ld7_JFZC6OoC9wdDSJ8gR78T-FRXpMRUi_x0x5dDQlnNSlAVIi4ikvGkeuq58vO-mbMkfuX5ZBi7Uu4d0Ng-sZsOo1T5tRafgU6G6zHc3cupdcWvCbeN9t-LuoR9Zp5Wx18_xlj6_eL24TbeXgBb0Az9mZV6g7Oe6kkD93Ug8wB8iK2FditOphT-KQ842vT4EB8ANgXejZ9_ogDi6ITL9XRhml-vy-3YLR_fpsQOfHouycF3bgA8xka6M8efkvZ59dhdQtwnrIVaHMsjNaZcz76qaqI2wO4zfVhX-t35O3_iPG7FPwQIkZh_qGf9K5dsIKMW5LY1BWJkJEgjmfLo8HQigTmEaj6l_9K5NKVVrnHlyeNkzJdnN4YUtuhpUadBA0kvHMbplwnn2ZvW9CnxeBUh1jwhFs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
