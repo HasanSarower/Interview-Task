@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Dashboard from "../views/Dashboard.vue";
 import User from "../views/User.vue";
+import Role_list from "../views/Role_list.vue";
 
 
 Vue.use(VueRouter);
@@ -37,6 +38,12 @@ const routes = [
     path: "/user/:id",
     name: "User",
     component:User,
+    meta: { authOnly: true }
+  },
+  {
+    path: "/role-list",
+    name: "Role_list",
+    component:Role_list,
     meta: { authOnly: true }
   }
 

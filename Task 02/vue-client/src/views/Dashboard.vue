@@ -7,10 +7,11 @@
         <span>{{ user.email }}</span>
       </div>
 
-    <div v-for="user in allUserList.user_list" :key="user.id">
-      <p>{{ user.id }}</p>
+    <div v-for="(user,index) in allUserList.user_list" :key="user.id">
+      <p>{{ index+1 }}</p>
       <p>{{ user.name }}</p>
       <p>{{ user.email }}</p>
+      <router-link :to="{name:'User', params:{id:user.id}}"> <button>See more ..</button> </router-link>
     </div>
     </div>
   </div>
@@ -32,9 +33,9 @@ export default {
   
   }},
   mounted() {
-    User.auth().then(response => {
-      this.$store.commit("AUTH_USER", response.data);
-    });
+    // User.auth().then(response => {
+    //   this.$store.commit("AUTH_USER", response.data);
+    // });
     User.getAllUser().then(response => {
       this.allUserList = response.data;
       console.log(response.data);

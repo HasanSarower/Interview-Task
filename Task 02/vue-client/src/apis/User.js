@@ -14,7 +14,6 @@ export default {
   },
 
   auth() {
-
     return Api().get("/user");
   },
   getAllUser(){
@@ -22,5 +21,21 @@ export default {
   },
   getUser(id){
     return Api().get("/user-profile/"+id);
+  },
+  getRoleList()
+  {
+    return Api().get("/role-list");
+  },
+  postNewRole(newRole){
+    return Api().post("/create-role",newRole);
+  },
+  deleteRole(id){
+    return Api().post("/delete-role",{id:id});
+  },
+  assignRole(userObject){
+    return Api().post("/assign-role",userObject);
+  },
+  deleteCurrentrole(pivot){
+    return Api().post("/delete-assign-role",pivot);
   }
 };

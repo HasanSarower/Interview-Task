@@ -59,6 +59,4 @@ Route::group([ 'middleware' => ['auth:api','checkAdmin']], function () {
     Route::post('logout', 'LoginController@logout');
 
 
-
-
 });
